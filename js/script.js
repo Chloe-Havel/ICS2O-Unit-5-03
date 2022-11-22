@@ -4,20 +4,30 @@
 // Created on: Sep 2020
 // This file contains the JS functions for index.html
 
-"use strict"
-
 /**
  * Check servie worker.
  */
-if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test-1/sw.js", {
-    scope: "/ICS2O-PWA-Test-1/",
+  if (navigator.serviceWorker) {
+  navigator.serviceWorker.register("/ICS2O-Unit-5-03/sw.js", {
+    scope: "/ICS2O-Unit-5-03/",
   })
 }
 
+const randomNumber = Math.floor(Math.random() * 17) + 1 // returns a random integer from 1 to 6 into variable "randomNumber"
+
 /**
- * This function displays an alert.
+ * This function updates the slider value.
  */
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+function updateSliderValue(valueFromSlider) {
+  document.getElementById("slider-value").innerHTML = valueFromSlider
+  //process
+  if (valueFromSlider == randomNumber) {
+    document.getElementById("answer").innerHTML =
+      "The answer was, " + randomNumber + "!" + "You got it! Good job."
+  }
+  // block of code to be executed if condition1 is true
+  if (valueFromSlider != randomNumber) {
+    document.getElementById("answer").innerHTML =
+      "the answer was, " + randomNumber + "!" + "Nice guess, but try again."
+  }
 }
