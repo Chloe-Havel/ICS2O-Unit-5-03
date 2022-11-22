@@ -21,4 +21,4 @@ function updateSliderValue(valueFromSlider) {
   //process
 let age = valueFromSlider
 
-if age ==
+if age >=
