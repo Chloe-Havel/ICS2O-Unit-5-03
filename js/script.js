@@ -19,13 +19,15 @@ if (navigator.serviceWorker) {
 function updateSliderValue(valueFromSlider) {
   document.getElementById("slider-value").innerHTML = valueFromSlider
   //process
-let age = valueFromSlider
+  let age = valueFromSlider
 
-if (age >= 17) {
-  write ("You can see a R rated movie alone.")
+  if (age >= 17) {
+    document.getElementById("answer").innerHTML = "You can see a R rated movie alone."
+  }
+  else if (age >= 13) {
+    document.getElementById("answer").innerHTML ="you can  see a PG 13 movie alnoe."
+  }
+  else {
+    document.getElementById("answer").innerHTML ="You can see a G rated movie Alone."
+  }
 }
-else if (age >= 13) {
-  write ("you can  see a PG 13 movie alnoe.")
-}
-else {
-  write ("You can see a G rated movie Alone.")
