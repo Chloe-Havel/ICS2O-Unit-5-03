@@ -22,12 +22,13 @@ function updateSliderValue(valueFromSlider) {
   let age = valueFromSlider
 
   if (age >= 17) {
-    document.getElementById("answer").innerHTML = "You can see a R rated movie alone."
-  }
-  else if (age >= 13) {
-    document.getElementById("answer").innerHTML ="you can  see a PG 13 movie alnoe."
-  }
-  else {
-    document.getElementById("answer").innerHTML ="You can see a G rated movie Alone."
+    document.getElementById("answer").innerHTML =
+      "You can see a R rated movie alone."
+  } else if (age >= 13) {
+    document.getElementById("answer").innerHTML =
+      "you can  see a PG 13 movie alnoe."
+  } else {
+    document.getElementById("answer").innerHTML =
+      "You can see a G rated movie Alone."
   }
 }
