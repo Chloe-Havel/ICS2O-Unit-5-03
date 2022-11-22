@@ -21,4 +21,11 @@ function updateSliderValue(valueFromSlider) {
   //process
 let age = valueFromSlider
 
-if age >=
+if (age >= 17) {
+  write ("You can see a R rated movie alone.")
+}
+else if (age >= 13) {
+  write ("you can  see a PG 13 movie alnoe.")
+}
+else {
+  write ("You can see a G rated movie Alone.")
